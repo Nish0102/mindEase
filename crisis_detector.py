@@ -1,15 +1,20 @@
+# List of words that indicate a crisis situation
 crisis_words = [
     "hopeless", "suicide", "end my life", "can't go on",
-    "want to die", "kill myself", "no reason to live"
+    "want to die", "kill myself", "no reason to live",
+    "better off dead", "can't take it anymore"
 ]
 
+# List of words that indicate sadness
 sad_words = [
     "sad", "depressed", "anxious", "lonely", "worthless",
-    "tired", "exhausted", "overwhelmed", "scared", "lost"
+    "tired", "exhausted", "overwhelmed", "scared", "lost",
+    "hopeless", "empty", "numb", "broken", "hurt"
 ]
 
+# Helpline message shown during crisis
 HELPLINE = """
-🆘 **If you're in crisis, please reach out:**
+🆘 **Please reach out for immediate help:**
 - **iCall (India):** 9152987821
 - **Vandrevala Foundation:** 1860-2662-345 (24/7)
 - **AASRA:** 9820466627
