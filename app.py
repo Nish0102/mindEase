@@ -1,5 +1,6 @@
 import streamlit as st
 import os
+import google.generativeai as genai
 from dotenv import load_dotenv
 from utils.loader import load_pdf
 from utils.chunker import chunk_documents
@@ -9,6 +10,7 @@ from rag_pipeline import build_rag_chain, get_response
 
 load_dotenv()
 API_KEY = os.getenv("GOOGLE_API_KEY")
+genai.configure(api_key=API_KEY)
 
 # Page config
 st.set_page_config(page_title="MindEase", page_icon="🧠")
@@ -56,7 +58,13 @@ if user_input := st.chat_input("How are you feeling today?"):
             st.markdown(response)
 
         elif st.session_state.chain is None:
-            response = "Please upload a mental health PDF first so I can help you better 💙"
+            model = genai.GenerativeModel("gemini-1.5-flash")
+            gemini_response = model.generate_content(
+                f"You are MindEase, a compassionate mental health support assistant. Be empathetic and supportive. User says: {user_input}"
+            )
+            response = gemini_response.text
+            if mood == "SAD":
+                st.info("💙 I can sense you're going through something difficult.")
             st.markdown(response)
 
         else:
