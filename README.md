@@ -19,28 +19,6 @@ Unlike generic AI chatbots, MindEase:
 
 ---
 
-## 🏗️ Project Structure
-
-```
-mindease-rag/
-│
-├── app.py                  # Main Streamlit UI
-├── rag_pipeline.py         # RAG chain builder
-├── requirements.txt        # Dependencies
-├── .env.example            # API key template
-├── .gitignore
-│
-├── utils/
-│   ├── loader.py           # PDF loading
-│   ├── chunker.py          # Text splitting
-│   ├── embeddings.py       # Vector store creation
-│   └── crisis_detector.py  # Mood & crisis detection
-│
-├── data/                   # Upload PDFs here (gitignored)
-└── vectorstore/            # FAISS index stored here (gitignored)
-```
-
-
 ## 🚀 Setup & Run
 
 ### 1. Clone the repo
