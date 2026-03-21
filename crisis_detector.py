@@ -1,4 +1,4 @@
-# List of words that indicate a crisis situation
+
 crisis_words = [
     "hopeless", "suicide", "end my life", "can't go on",
     "want to die", "kill myself", "no reason to live",
